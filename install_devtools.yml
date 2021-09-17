@@ -1,0 +1,13 @@
+---
+- name: Install devtool
+  hosts:
+    - all
+  gather_facts: no
+  become: no
+  tasks:
+    - name: Install JDK
+      debug:
+        msg: "yum install jdk"
+    - name: Install debugger
+      debug:
+        msg: "yum install debugger"
