@@ -9,6 +9,5 @@
   tasks:
     - name: Ensure firewall port is open
       debug:
-        msg: "Opening port {{ item }}"
-      loop: "{{ ports_to_open }}"
+        msg: "Opening port {{ port_to_open }}"
       
