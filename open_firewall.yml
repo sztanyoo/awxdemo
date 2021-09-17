@@ -5,9 +5,7 @@
   gather_facts: no
   become: no
   vars:
-    ports_to_open:
-      - 80
-      - 443
+    port_to_open: 80
   tasks:
     - name: Ensure firewall port is open
       debug:
