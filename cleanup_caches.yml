@@ -1,0 +1,14 @@
+---
+- name: Cleanup cache
+  hosts:
+    - all
+  gather_facts: no
+  become: no
+  tasks:
+    - name: Cleanup tmp
+      debug:
+        msg: "rm -fr /tmp/oldcache"
+    - name: Cleanup old reports
+      debug:
+        msg: "rm -fr /opt/appServer/reports/old"
+      
