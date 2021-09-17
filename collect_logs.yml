@@ -8,3 +8,6 @@
     - name: Login to service to download logs
       debug:
         msg: "Login with user {{ service_username }} using password: {{ service_password }} (obviously this shouldn't be printed here...)"
+    - name: Save logs to dev team server
+      debug:
+        msg: "scp prodserver/logs/*.log devserver/logs/"
