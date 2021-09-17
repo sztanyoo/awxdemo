@@ -1,0 +1,10 @@
+---
+- name: Configure service
+  hosts:
+    - all
+  gather_facts: no
+  become: no
+  tasks:
+    - name: Login to service for configuration
+      debug:
+        msg: "Login with user {{ service_username }} using password: {{ service_password }} (obviously this shouldn't be printed here...)"
